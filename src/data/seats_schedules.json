@@ -1,0 +1,44 @@
+[
+  {
+    "schedule_id": "sch001-20250711-1",
+    "seats": [
+      {"seat_id": "A-1", "row": "A", "number": "1", "is_reserved": false},
+      {"seat_id": "A-2", "row": "A", "number": "2", "is_reserved": true},
+      {"seat_id": "A-3", "row": "A", "number": "3", "is_reserved": false},
+      {"seat_id": "A-4", "row": "A", "number": "4", "is_reserved": false},
+      {"seat_id": "B-1", "row": "B", "number": "1", "is_reserved": true},
+      {"seat_id": "B-2", "row": "B", "number": "2", "is_reserved": false},
+      {"seat_id": "B-3", "row": "B", "number": "3", "is_reserved": false},
+      {"seat_id": "B-4", "row": "B", "number": "4", "is_reserved": true},
+      {"seat_id": "C-1", "row": "C", "number": "1", "is_reserved": false},
+      {"seat_id": "C-2", "row": "C", "number": "2", "is_reserved": true},
+      {"seat_id": "C-3", "row": "C", "number": "3", "is_reserved": false},
+      {"seat_id": "C-4", "row": "C", "number": "4", "is_reserved": false},
+      {"seat_id": "D-1", "row": "D", "number": "1", "is_reserved": true},
+      {"seat_id": "D-2", "row": "D", "number": "2", "is_reserved": false},
+      {"seat_id": "D-3", "row": "D", "number": "3", "is_reserved": true},
+      {"seat_id": "D-4", "row": "D", "number": "4", "is_reserved": false}
+    ]
+  },
+  {
+    "schedule_id": "sch001-20250711-2",
+    "seats": [
+      {"seat_id": "A-1", "row": "A", "number": "1", "is_reserved": true},
+      {"seat_id": "A-2", "row": "A", "number": "2", "is_reserved": false},
+      {"seat_id": "A-3", "row": "A", "number": "3", "is_reserved": false},
+      {"seat_id": "A-4", "row": "A", "number": "4", "is_reserved": true},
+      {"seat_id": "B-1", "row": "B", "number": "1", "is_reserved": false},
+      {"seat_id": "B-2", "row": "B", "number": "2", "is_reserved": true},
+      {"seat_id": "B-3", "row": "B", "number": "3", "is_reserved": false},
+      {"seat_id": "B-4", "row": "B", "number": "4", "is_reserved": false},
+      {"seat_id": "C-1", "row": "C", "number": "1", "is_reserved": true},
+      {"seat_id": "C-2", "row": "C", "number": "2", "is_reserved": false},
+      {"seat_id": "C-3", "row": "C", "number": "3", "is_reserved": true},
+      {"seat_id": "C-4", "row": "C", "number": "4", "is_reserved": false},
+      {"seat_id": "D-1", "row": "D", "number": "1", "is_reserved": false},
+      {"seat_id": "D-2", "row": "D", "number": "2", "is_reserved": true},
+      {"seat_id": "D-3", "row": "D", "number": "3", "is_reserved": false},
+      {"seat_id": "D-4", "row": "D", "number": "4", "is_reserved": true}
+    ]
+  }
+]

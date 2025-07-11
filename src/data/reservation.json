@@ -1,0 +1,9 @@
+{
+  "reservation": {
+    "reservation_id": "resv001",
+    "user_id": "user123",
+    "schedule_id": "sch001",
+    "seats": ["A-1"],
+    "status": "confirmed"
+  }
+}

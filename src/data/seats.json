@@ -1,0 +1,16 @@
+{
+  "seats": [
+    {
+      "seat_id": "A-1",
+      "row": "A",
+      "number": "1",
+      "is_reserved": false
+    },
+    {
+      "seat_id": "A-2",
+      "row": "A",
+      "number": "2",
+      "is_reserved": true
+    }
+  ]
+}

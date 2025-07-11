@@ -1,0 +1,9 @@
+{
+  "fuzzy_input_request": {
+    "input": "Romanc in Tokyo"
+  },
+  "fuzzy_input_response": {
+    "corrected_input": "Romance in Tokyo",
+    "candidates": ["Romance in Tokyo", "Romance in Kyoto"]
+  }
+}

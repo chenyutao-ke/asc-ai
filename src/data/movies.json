@@ -1,0 +1,60 @@
+{
+  "movies": [
+    {
+      "id": "mov001",
+      "title": "君の名は。",
+      "description": "運命的な出会いを描く青春ファンタジー。",
+      "duration": 106,
+      "genre": "Animation"
+    },
+    {
+      "id": "mov002",
+      "title": "万引き家族",
+      "description": "家族の絆と社会の闇を描くヒューマンドラマ。",
+      "duration": 121,
+      "genre": "Drama"
+    },
+    {
+      "id": "mov003",
+      "title": "シン・ゴジラ",
+      "description": "日本を襲うゴジラと政府の奮闘を描く特撮映画。",
+      "duration": 120,
+      "genre": "Sci-Fi"
+    },
+    {
+      "id": "mov004",
+      "title": "天気の子",
+      "description": "天候を操る少女と少年の出会いを描くファンタジー。",
+      "duration": 112,
+      "genre": "Animation"
+    },
+    {
+      "id": "mov005",
+      "title": "劇場版 呪術廻戦 0",
+      "description": "呪術師たちの戦いを描く人気アニメ映画。",
+      "duration": 105,
+      "genre": "Animation"
+    },
+    {
+      "id": "mov006",
+      "title": "ミッドナイトスワン",
+      "description": "トランスジェンダーの主人公と少女の成長物語。",
+      "duration": 124,
+      "genre": "Drama"
+    },
+    {
+      "id": "mov007",
+      "title": "カメラを止めるな！",
+      "description": "ワンカット撮影のゾンビ映画制作の舞台裏を描くコメディ。",
+      "duration": 96,
+      "genre": "Comedy"
+    },
+    {
+      "id": "mov008",
+      "title": "るろうに剣心 最終章 The Final",
+      "description": "剣心の最後の戦いを描くアクション時代劇。",
+      "duration": 138,
+      "genre": "Action"
+    }
+  ]
+}

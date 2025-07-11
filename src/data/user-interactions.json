@@ -1,0 +1,19 @@
+{
+  "user_interactions": [
+    {
+      "timestamp": "2025-07-11T13:45:00+09:00",
+      "action": "search_movie",
+      "details": {
+        "query": "Adventure"
+      }
+    },
+    {
+      "timestamp": "2025-07-11T13:50:00+09:00",
+      "action": "reserve_seat",
+      "details": {
+        "schedule_id": "sch001",
+        "seat_id": "A-1"
+      }
+    }
+  ]
+}

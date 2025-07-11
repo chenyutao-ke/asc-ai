@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    {
+      "type": "movie",
+      "id": "mov002",
+      "title": "Romance in Tokyo"
+    },
+    {
+      "type": "seat",
+      "id": "A-3",
+      "row": "A",
+      "number": "3"
+    }
+  ]
+}

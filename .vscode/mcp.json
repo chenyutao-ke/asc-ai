@@ -13,7 +13,7 @@
         }
     ],
     "servers": {
-        "remote-mcp-function": {
+        "remote-mcp-function-kechenyutao": {
             "type": "sse",
             "url": "https://${input:functionapp-name}.azurewebsites.net/runtime/webhooks/mcp/sse",
             "headers": {

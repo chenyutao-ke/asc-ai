@@ -1,0 +1,106 @@
+{
+  "movies": [
+    {
+      "id": "mov001",
+      "title": "The Great Adventure",
+      "description": "An epic journey of discovery.",
+      "duration": 120,
+      "genre": "Adventure"
+    },
+    {
+      "id": "mov002",
+      "title": "Romance in Tokyo",
+      "description": "A heartwarming love story.",
+      "duration": 105,
+      "genre": "Romance"
+    }
+  ],
+  "schedules": [
+    {
+      "schedule_id": "sch001",
+      "movie_id": "mov001",
+      "start_time": "2025-07-11T14:00:00+09:00",
+      "screen": "Screen 1"
+    },
+    {
+      "schedule_id": "sch002",
+      "movie_id": "mov002",
+      "start_time": "2025-07-11T16:30:00+09:00",
+      "screen": "Screen 2"
+    }
+  ],
+  "seats": [
+    {
+      "seat_id": "A-1",
+      "row": "A",
+      "number": "1",
+      "is_reserved": false
+    },
+    {
+      "seat_id": "A-2",
+      "row": "A",
+      "number": "2",
+      "is_reserved": true
+    }
+  ],
+  "reserve_request": {
+    "user_id": "user123",
+    "schedule_id": "sch001",
+    "seats": ["A-1"]
+  },
+  "reserve_response": {
+    "reservation_id": "resv001",
+    "status": "confirmed",
+    "message": "Reservation successful."
+  },
+  "reservation": {
+    "reservation_id": "resv001",
+    "user_id": "user123",
+    "schedule_id": "sch001",
+    "seats": ["A-1"],
+    "status": "confirmed"
+  },
+  "fuzzy_input_request": {
+    "input": "Romanc in Tokyo"
+  },
+  "fuzzy_input_response": {
+    "corrected_input": "Romance in Tokyo",
+    "candidates": ["Romance in Tokyo", "Romance in Kyoto"]
+  },
+  "recommendations": [
+    {
+      "type": "movie",
+      "id": "mov002",
+      "title": "Romance in Tokyo"
+    },
+    {
+      "type": "seat",
+      "id": "A-3",
+      "row": "A",
+      "number": "3"
+    }
+  ],
+  "user_interactions": [
+    {
+      "timestamp": "2025-07-11T13:45:00+09:00",
+      "action": "search_movie",
+      "details": {
+        "query": "Adventure"
+      }
+    },
+    {
+      "timestamp": "2025-07-11T13:50:00+09:00",
+      "action": "reserve_seat",
+      "details": {
+        "schedule_id": "sch001",
+        "seat_id": "A-1"
+      }
+    }
+  ],
+  "error": {
+    "error": {
+      "code": "NOT_FOUND",
+      "message": "Movie not found."
+    }
+  }
+}

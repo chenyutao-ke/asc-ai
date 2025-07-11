@@ -1,0 +1,236 @@
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "tools": [
+      {
+        "name": "get_movies",
+        "description": "映画一覧を取得する",
+        "inputSchema": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "movies": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {"type": "string"},
+                  "title": {"type": "string"},
+                  "description": {"type": "string"},
+                  "duration": {"type": "integer"},
+                  "genre": {"type": "string"}
+                },
+                "required": ["id", "title", "description", "duration", "genre"]
+              }
+            }
+          },
+          "required": ["movies"]
+        }
+      },
+      {
+        "name": "get_schedules",
+        "description": "指定した映画の上映スケジュールを取得する",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "movie_id": {"type": "string", "description": "映画ID"}
+          },
+          "required": ["movie_id"]
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "schedules": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "schedule_id": {"type": "string"},
+                  "movie_id": {"type": "string"},
+                  "start_time": {"type": "string", "format": "date-time"},
+                  "screen": {"type": "string"}
+                },
+                "required": ["schedule_id", "movie_id", "start_time", "screen"]
+              }
+            }
+          },
+          "required": ["schedules"]
+        }
+      },
+      {
+        "name": "get_seats",
+        "description": "指定した上映スケジュールの座席情報を取得する",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "schedule_id": {"type": "string", "description": "上映スケジュールID"}
+          },
+          "required": ["schedule_id"]
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "seats": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "seat_id": {"type": "string"},
+                  "row": {"type": "string"},
+                  "number": {"type": "string"},
+                  "is_reserved": {"type": "boolean"}
+                },
+                "required": ["seat_id", "row", "number", "is_reserved"]
+              }
+            }
+          },
+          "required": ["seats"]
+        }
+      },
+      {
+        "name": "reserve_seats",
+        "description": "座席予約を登録する",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "user_id": {"type": "string", "description": "ユーザーID"},
+            "schedule_id": {"type": "string", "description": "上映スケジュールID"},
+            "seats": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "座席IDの配列"
+            }
+          },
+          "required": ["user_id", "schedule_id", "seats"]
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "reservation_id": {"type": "string"},
+            "status": {"type": "string", "enum": ["confirmed", "failed"]},
+            "message": {"type": "string"}
+          },
+          "required": ["reservation_id", "status", "message"]
+        }
+      },
+      {
+        "name": "get_reservation",
+        "description": "予約情報を取得する",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "reservation_id": {"type": "string", "description": "予約ID"}
+          },
+          "required": ["reservation_id"]
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "reservation": {
+              "type": "object",
+              "properties": {
+                "reservation_id": {"type": "string"},
+                "user_id": {"type": "string"},
+                "schedule_id": {"type": "string"},
+                "seats": {
+                  "type": "array",
+                  "items": {"type": "string"}
+                },
+                "status": {"type": "string", "enum": ["confirmed", "failed"]}
+              },
+              "required": ["reservation_id", "user_id", "schedule_id", "seats", "status"]
+            }
+          },
+          "required": ["reservation"]
+        }
+      },
+      {
+        "name": "fuzzy_input",
+        "description": "曖昧なユーザー入力を補正する",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "input": {"type": "string", "description": "ユーザー入力"}
+          },
+          "required": ["input"]
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "corrected_input": {"type": "string"},
+            "candidates": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          },
+          "required": ["corrected_input", "candidates"]
+        }
+      },
+      {
+        "name": "recommend",
+        "description": "おすすめ映画・座席を取得する",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "user_id": {"type": "string", "description": "ユーザーID"}
+          },
+          "required": ["user_id"]
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "recommendations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {"type": "string", "enum": ["movie", "seat"]},
+                  "id": {"type": "string"},
+                  "title": {"type": "string"},
+                  "row": {"type": "string"},
+                  "number": {"type": "string"}
+                },
+                "required": ["type", "id"]
+              }
+            }
+          },
+          "required": ["recommendations"]
+        }
+      },
+      {
+        "name": "get_user_interaction",
+        "description": "ユーザーの対話履歴を取得する",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "user_id": {"type": "string", "description": "ユーザーID"}
+          },
+          "required": ["user_id"]
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "interactions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "timestamp": {"type": "string", "format": "date-time"},
+                  "action": {"type": "string"},
+                  "details": {"type": "object"}
+                },
+                "required": ["timestamp", "action", "details"]
+              }
+            }
+          },
+          "required": ["interactions"]
+        }
+      }
+    ]
+  }
+}
